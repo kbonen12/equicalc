@@ -345,9 +345,9 @@
 <div class="tab-bar">
   <button class="tab-btn active" onclick="showPanel('glucose')">Glucose / Fluids</button>
   <button class="tab-btn" onclick="showPanel('tpn')">TPN</button>
-  <button class="tab-btn" onclick="showPanel('cri')">CRIs</button>
+  <button class="tab-btn" onclick="showPanel('cri')">CRI</button>
   <button class="tab-btn" onclick="showPanel('anesthesia')">Anesthesia</button>
-  <button class="tab-btn" onclick="showPanel('sedation')">Sedation / IM</button>
+  <button class="tab-btn" onclick="showPanel('sedation')">Sedation</button>
   <button class="tab-btn" onclick="showPanel('resuscitation')">Resuscitation</button>
   <button class="tab-btn" onclick="showPanel('reference')">Drug Reference</button>
 </div>
@@ -356,7 +356,7 @@
 
   <!-- ════════════ GLUCOSE / FLUIDS ════════════ -->
   <div class="panel active" id="panel-glucose">
-    <div class="panel-title">Glucose & Fluid Calculations</div>
+    <div class="panel-title">Glucose and Fluid Calculations</div>
     <div class="panel-desc">GIR, maintenance rates, and glucose supplementation for equine patients.</div>
     <div class="calc-grid">
 
@@ -761,7 +761,7 @@
 
   <!-- ════════════ SEDATION ════════════ -->
   <div class="panel" id="panel-sedation">
-    <div class="panel-title">Sedation & IM Drug Doses</div>
+    <div class="panel-title">Sedation and IM Drug Doses</div>
     <div class="panel-desc">Standing sedation, premedication, and IM doses for the field — alpha-2 agonists, opioids, and combinations.</div>
     <div class="calc-grid">
 
@@ -803,7 +803,7 @@
 
       <!-- Opioid / Combination -->
       <div class="card">
-        <div class="card-title">Opioid & Combination Doses</div>
+        <div class="card-title">Opioid and Combination Doses</div>
         <div class="field">
           <label>Body Weight (kg)</label>
           <input type="number" id="op-wt" placeholder="500" min="0" />
@@ -855,7 +855,7 @@
 
   <!-- ════════════ RESUSCITATION ════════════ -->
   <div class="panel" id="panel-resuscitation">
-    <div class="panel-title">Emergency & Resuscitation</div>
+    <div class="panel-title">Emergency and Resuscitation</div>
     <div class="panel-desc">Epinephrine, atropine, and emergency drug doses for equine cardiac arrest and crisis management.</div>
     <div class="warn-banner">⚠ Emergency drug dosing — confirm weight and double-check calculations before administration. Have crash cart ready.</div>
     <div class="calc-grid">
@@ -964,7 +964,7 @@
       </div>
 
       <div class="card">
-        <div class="card-title">Common Dilutions & Stock Concentrations</div>
+        <div class="card-title">Common Dilutions and Stock Concentrations</div>
         <table class="ref-table">
           <tr><th>Drug</th><th>Stock</th><th>Common Dilution</th></tr>
           <tr><td>Lidocaine</td><td class="mono">2% (20 mg/mL)</td><td>Add to LRS for CRI</td></tr>
@@ -1234,7 +1234,7 @@ function calcInduction() {
     const propDose = 3 * modifier * kg;
     const propVol = propDose / 10;
     content = row('Propofol (3 mg/kg IV)', fmt(propDose,1)+' mg / '+fmt(propVol,1)+' mL (10mg/mL)', 'danger') +
-              row('⚠ Foals & small equids ONLY', 'Apnea risk — have O₂ ready', 'danger');
+              row('⚠ Foals and small equids ONLY', 'Apnea risk — have O₂ ready', 'danger');
   }
   document.getElementById('ind-result-content').innerHTML = content;
   showResult('ind-result');
